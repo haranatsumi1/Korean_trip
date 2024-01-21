@@ -1,4 +1,4 @@
-## Korean＿trip
+## Korean_trip
 
 ## サービス概要
 
