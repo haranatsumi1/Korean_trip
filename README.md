@@ -42,7 +42,7 @@
 - postgresql or Mysql
 - JavaScript
 - tailwindcss,daisyUI
-- heroku or http://Fly.io or render
+- heroku
 - Google Maps Geolocation API
 - Google Maps Geocording API
 
