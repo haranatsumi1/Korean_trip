@@ -20,7 +20,7 @@
 
 ## 実装を予定している機能
 
-# MVP
+### MVP
 - 会員登録
 - ログイン
 - 投稿一覧
@@ -31,17 +31,17 @@
 - タグ機能
 - 旅のスケジュール作成機能
 
-# その後の機能
+### その後の機能
 - おすすめのスポット一覧
 - Google Maps Platformを使って現在位置取得し近くのおすすめスポットを表示しGoogle Mapアプリに繋げるようにする
 
-### 利用する具体的な技術と高度な機能
+## 利用する具体的な技術と高度な機能
 - Rails7
 - Ruby3
 - Hotwire
 - postgresql or Mysql
 - JavaScript
-- tailwindcss
+- tailwindcss,daisyUI
 - heroku or http://Fly.io or render
 - Google Maps Geolocation API
 - Google Maps Geocording API
