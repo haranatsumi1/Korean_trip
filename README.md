@@ -1,7 +1,4 @@
-# korean_trip
-
-## 画面遷移図
-https://www.figma.com/file/FSRo3035WTLezyF2VCYseY/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=5%3A2&mode=design&t=xdEvYkiRApH9zxWB-1
+# korean_tri
 
 ## サービス概要
 
@@ -23,7 +20,7 @@ https://www.figma.com/file/FSRo3035WTLezyF2VCYseY/%E7%94%BB%E9%9D%A2%E9%81%B7%E7
 
 ## 実装を予定している機能
 
-### MVP
+# MVP
 * 会員登録
 * ログイン
 * 投稿一覧
@@ -32,20 +29,27 @@ https://www.figma.com/file/FSRo3035WTLezyF2VCYseY/%E7%94%BB%E9%9D%A2%E9%81%B7%E7
 * 投稿編集
 * 投稿ブックマーク機能
 * タグ機能
-* 旅のしおり作成機能
+* 旅のシケジュール作成機能
 
-### その後の機能
-* おすすめのプランなどの記事一覧
-* Google Maps Platformを使って現在位置取得機能
+# その後の機能
+* おすすめのスポット一覧
+* Google Maps Platformを使って現在位置取得し近くのおすすめスポットを表示しGoogle Mapアプリに繋げるようにする
 
 ### 利用する具体的な技術と高度な機能
-Rails7
-Ruby3
-Hotwire
-postgresql or Mysql
-JavaScript
-Bootstrap or tailwindcss
-heroku or http://Fly.io or render
-Google Maps Geolocation API
-Google Maps Geocording API
+- Rails7
+- Ruby3
+- Hotwire
+- postgresql or Mysql
+- JavaScript
+- tailwindcss
+- heroku or http://Fly.io or render
+- Google Maps Geolocation API
+- Google Maps Geocording API
+
+
+## 画面遷移図
+[画面遷移図](https://www.figma.com/file/FSRo3035WTLezyF2VCYseY/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=5%3A2&mode=design&t=xdEvYkiRApH9zxWB-1)
+
+## ER図
+[![Image from Gyazo](https://i.gyazo.com/44ef72af30578c84822907eb52684854.png)](https://gyazo.com/44ef72af30578c84822907eb52684854)
 
