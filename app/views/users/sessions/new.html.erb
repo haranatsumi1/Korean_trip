@@ -1,45 +1,40 @@
-<div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-  <div class="mx-auto max-w-lg text-center">
-    <h1 class="text-2xl font-bold sm:text-3xl">ログイン</h1>
-
-    <p class="mt-4 text-gray-500">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla eaque error neque
-      ipsa culpa autem, at itaque nostrum!
-    </p>
+<div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 text-custom-brown">
+  <div class="mx-auto max-w-3xl text-center mt-16">
+    <h1 class="text-2xl font-bold sm:text-3xl ">ログイン</h1>
   </div>
 
-  <%= form_with(url: user_session_path, local: true, class: "mx-auto mb-0 mt-8 max-w-md space-y-4") do |f| %>
-    <div>
-      <%= f.label :email, class: "sr-only" %>
 
-      <div class="relative">
-        <%= f.email_field :email, class: "w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm", placeholder: "Enter email" %>
-
-        <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
-          <!-- SVG icon -->
-        </span>
+  <div class="mx-auto mt-8 mb-0 max-w-3xl bg-custom-beige py-12 px-36 rounded-lg shadow-md"> <!-- 背景のサイズを調整 -->
+    <!-- フォームがUserモデルのオブジェクトに紐付けられ、適切なパラメータがコントローラに送信される -->
+    <!-- form_withはデフォルトでAjaxリクエストを使用するため、local: trueオプションを指定して通常のHTTPリクエストを行う -->
+    <%= form_with(model: User.new, url: user_session_path, local: true, class: "mx-auto my-8 space-y-8") do |f| %> <!-- フォームのサイズを調整 -->
+      <div>
+        <%= f.label :email, class: "sr-only" %>
+        <div class="relative">
+          <%= f.email_field :email, class: "w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-custom-orange", placeholder: "メールアドレス" %>
+        </div>
       </div>
-    </div>
-
-    <div>
-      <%= f.label :password, class: "sr-only" %>
-
-      <div class="relative">
-        <%= f.password_field :password, class: "w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm", placeholder: "Enter password" %>
-
-        <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
-          <!-- SVG icon -->
-        </span>
+  
+      <div>
+        <%= f.label :password, class: "sr-only" %>
+        <div class="relative">
+          <%= f.password_field :password, class: "w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-custom-orange", placeholder: "パスワード" %>
+        
+        </div>
       </div>
-    </div>
+  
+      <div class="flex flex-col items-center justify-between text-sm space-y-8">
+        <div class="flex items-center justify-center text-base hover:text-custom-orange">
+        <%= link_to "パスワードを忘れた方はこちら", new_user_registration_path, class: "underline" %>
+      </div>
+        <%= f.submit "ログイン", class: "btn btn-wide bg-custom-orange text-custom-brown" %>
 
-    <div class="flex items-center justify-between">
-      <p class="text-sm text-gray-500">
-        No account?
-        <%= link_to "Sign up", new_user_registration_path, class: "underline" %>
-      </p>
+      </div>
+    <% end %>
+  </div>
 
-      <%= f.submit "Sign in", class: "inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white" %>
-    </div>
-  <% end %>
+  <div class="flex items-center justify-center py-8 text-base hover:text-custom-orange">
+  <%= link_to "会員登録はこちら", new_user_registration_path, class: "underline" %>
 </div>
+</div>
+

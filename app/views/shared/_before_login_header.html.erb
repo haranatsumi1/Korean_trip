@@ -1,26 +1,23 @@
-<header class="text-white body-font bg-custom-pink">
-  <!-- コンテナ: ヘッダーの全体的なレイアウトを定義 -->
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <!-- ロゴとサイト名 -->
-    <%= link_to "#", class: "flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" do %>
-      <!-- ロゴアイコン -->
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-pink-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
-      <!-- サイト名 -->
-      <span class="ml-3 text-4xl text-white">Korean Trip</span>
-    <% end %>
-    <!-- ナビゲーションメニュー -->
-    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <!-- ナビゲーションリンク -->
-      <%= link_to "ログイン", new_user_session_path, class: "mr-5 hover:text-gray-100" %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "mr-5 hover:text-gray-100", data: { turbolinks: false } %>
+<header class="text-custom-brown body-font mt-3">
+  <div class="container mx-auto flex flex-wrap items-center justify-between">
+    <!-- ロゴアイコン -->
+    <div class="flex items-center">
+      <%= image_tag('Korean_Trip.png', size: "300x300") %>
+    </div>
 
+    <!-- ナビゲーションメニューと新規登録ボタン -->
+    <div class="flex items-center">
+      <nav class="flex items-center text-base">
+        <!-- ナビゲーションリンク -->
+        <%= link_to "ログイン", new_user_session_path, class: "mr-5 hover:text-custom-orange" %>
+        <%= form_with(url: destroy_user_session_path, method: :delete, class: "hover:text-custom-orange") do |form| %>
+          <%= form.submit "ログアウト", class: "link no-underline" %>
+        <% end %>
+      </nav>
 
-
-
-    </nav>
-    <!-- 新規登録ボタン -->
-    <%= button_to "新規登録", new_user_registration_path, class: "inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0", method: :get %>
+      <!-- 新規登録ボタン -->
+      <%= button_to "新規登録", new_user_registration_path, class: "inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-custom-orange rounded text-base ml-5", method: :get %>
+    </div>
   </div>
 </header>
+

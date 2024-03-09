@@ -1,13 +1,10 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :configure_sign_up_params, only: [:create]
 
   def create
     super
-    unless resource.persisted?
-      logger.debug(resource.errors.full_messages) # エラーメッセージをログに出力
-    end
+    flash[:notice] = '新規登録が成功しました。' if resource.persisted?
   end
 
 
@@ -15,12 +12,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     root_path
   end
 
-  protected
-
-  # Deviseのストロングパラメーターを拡張
-  def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :email, :password, :password_confirmation])
-  end
 end
   # GET /resource/sign_up
   # def new

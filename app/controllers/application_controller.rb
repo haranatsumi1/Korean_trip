@@ -1,18 +1,11 @@
 class ApplicationController < ActionController::Base
-    helper_method :current_user, :logged_in?
+  before_action :configure_sign_up_params, only: [:create]
 
-    private
+  protected
 
-    # 現在ログインしているユーザーを返す（いなければnil）
-    def current_user
-      @current_user ||= User.find(session[:user_id]) if session[:user_id]
-    end
-
-    # ユーザーがログインしていればtrue、その他ならfalseを返す
-    def logged_in?
-      !current_user.nil?
-    end
-
-
+  # Deviseのストロングパラメーターを拡張
+  def configure_sign_up_params
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :email, :password, :password_confirmation])
+  end
 
 end

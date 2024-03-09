@@ -10,11 +10,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'custom-pink': '#D6B0BA',
-        'custom-blue': '#9FB0CF',
-        'custom-green': '#E8E9D5',
-        'custom-berge': '#E8D7D1',
-        'custom-rose': '#CFB4BA',
+        'custom-skin': '#e8c8be',
+        'custom-okre': '#d19d87',
+        'custom-orange': '#c2734e',
+        'custom-beige': '#d7be9f',
+        'custom-brown': '#4c484f',
       },
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
