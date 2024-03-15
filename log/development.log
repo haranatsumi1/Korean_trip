@@ -24720,3 +24720,66 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.6ms | Allocations: 12477)
 
 
+Started POST "/posts" for ::1 at 2024-03-15 00:18:51 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"あああ", "body"=>"あああああ", "area_id"=>"1", "post_image"=>#<ActionDispatch::Http::UploadedFile:0x0000000113ffa5a0 @tempfile=#<Tempfile:/var/folders/5_/71t1f_m12dgg4_tjv4mr52hm0000gn/T/RackMultipart20240315-70089-og1bc0.png>, @content_type="image/png", @original_filename="avatar (1).png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"avatar (1).png\"\r\nContent-Type: image/png\r\n">, "post_image_cache"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 4.8ms | Allocations: 11929)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/posts_controller.rb:17:in `create'
+Started POST "/posts" for ::1 at 2024-03-15 00:20:16 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"あああ", "body"=>"あああああ", "area_id"=>"1", "post_image"=>#<ActionDispatch::Http::UploadedFile:0x0000000113e5a6a0 @tempfile=#<Tempfile:/var/folders/5_/71t1f_m12dgg4_tjv4mr52hm0000gn/T/RackMultipart20240315-70089-9miypl.png>, @content_type="image/png", @original_filename="avatar (1).png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"avatar (1).png\"\r\nContent-Type: image/png\r\n">, "post_image_cache"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 3807)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/posts_controller.rb:17:in `create'
+Started POST "/posts" for ::1 at 2024-03-15 00:23:02 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"あああ", "body"=>"あああああ", "area_id"=>"1", "post_image"=>#<ActionDispatch::Http::UploadedFile:0x0000000113ffbd60 @tempfile=#<Tempfile:/var/folders/5_/71t1f_m12dgg4_tjv4mr52hm0000gn/T/RackMultipart20240315-70089-h0e0gk.png>, @content_type="image/png", @original_filename="avatar (1).png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"avatar (1).png\"\r\nContent-Type: image/png\r\n">, "post_image_cache"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameter: :post_image_cache. Context: { controller: PostsController, action: create, request: #<ActionDispatch::Request:0x0000000114076560>, params: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"あああ", "body"=>"あああああ", "area_id"=>"1", "post_image"=>#<ActionDispatch::Http::UploadedFile:0x0000000113ffbd60 @tempfile=#<Tempfile:/var/folders/5_/71t1f_m12dgg4_tjv4mr52hm0000gn/T/RackMultipart20240315-70089-h0e0gk.png>, @content_type="image/png", @original_filename="avatar (1).png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"avatar (1).png\"\r\nContent-Type: image/png\r\n">, "post_image_cache"=>""}, "commit"=>"投稿する", "controller"=>"posts", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.8ms | Allocations: 12037)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/posts_controller.rb:17:in `create'
+Started GET "/posts/new" for ::1 at 2024-03-15 00:23:08 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 51)
+  [1m[36mArea Load (0.3ms)[0m  [1m[34mSELECT "areas".* FROM "areas"[0m
+  ↳ app/views/posts/_form.html.erb:14
+  Rendered posts/_form.html.erb (Duration: 16.8ms | Allocations: 5713)
+  Rendered posts/new.html.erb within layouts/application (Duration: 17.9ms | Allocations: 5813)
+  Rendered shared/_header.html.erb (Duration: 2.3ms | Allocations: 2029)
+  Rendered shared/_flash_message.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 12376)
+Completed 200 OK in 29ms (Views: 21.9ms | ActiveRecord: 3.6ms | Allocations: 14870)
+
+
+Started POST "/posts" for ::1 at 2024-03-15 00:23:10 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"あああ", "body"=>"あああああ", "area_id"=>"1", "post_image"=>#<ActionDispatch::Http::UploadedFile:0x0000000113e55790 @tempfile=#<Tempfile:/var/folders/5_/71t1f_m12dgg4_tjv4mr52hm0000gn/T/RackMultipart20240315-70089-hzfxbg.png>, @content_type="image/png", @original_filename="avatar (1).png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"avatar (1).png\"\r\nContent-Type: image/png\r\n">, "post_image_cache"=>""}, "commit"=>"投稿する"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[31mUnpermitted parameter: :post_image_cache. Context: { controller: PostsController, action: create, request: #<ActionDispatch::Request:0x00000001140174e8>, params: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"あああ", "body"=>"あああああ", "area_id"=>"1", "post_image"=>#<ActionDispatch::Http::UploadedFile:0x0000000113e55790 @tempfile=#<Tempfile:/var/folders/5_/71t1f_m12dgg4_tjv4mr52hm0000gn/T/RackMultipart20240315-70089-hzfxbg.png>, @content_type="image/png", @original_filename="avatar (1).png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"avatar (1).png\"\r\nContent-Type: image/png\r\n">, "post_image_cache"=>""}, "commit"=>"投稿する", "controller"=>"posts", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 3899)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/controllers/posts_controller.rb:17:in `create'
