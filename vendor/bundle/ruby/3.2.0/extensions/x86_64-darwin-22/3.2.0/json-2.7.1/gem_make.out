@@ -1,0 +1,16 @@
+current directory: /Users/haranatsumi/workspace/Webアプリ開発/Krean _trip/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+/Users/haranatsumi/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/haranatsumi/workspace/Webアプリ開発/Krean _trip/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240309-9448-sus67n sitelibdir\=./.gem.20240309-9448-sus67n clean
+
+current directory: /Users/haranatsumi/workspace/Webアプリ開発/Krean _trip/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240309-9448-sus67n sitelibdir\=./.gem.20240309-9448-sus67n
+make: Nothing to be done for `all'.
+
+current directory: /Users/haranatsumi/workspace/Webアプリ開発/Krean _trip/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240309-9448-sus67n sitelibdir\=./.gem.20240309-9448-sus67n install
+
+current directory: /Users/haranatsumi/workspace/Webアプリ開発/Krean _trip/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240309-9448-sus67n sitelibdir\=./.gem.20240309-9448-sus67n clean

@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'static_pages#top'
+
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
+  }
+
+  devise_scope :user do
+    get "sign_in", :to => "users/sessions#new"
+    delete "sign_out", :to => "users/sessions#destroy"
+  end
+
+  resources :posts, only: %i[index new create]
 end

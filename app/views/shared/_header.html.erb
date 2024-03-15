@@ -1,0 +1,26 @@
+<header class="text-custom-brown body-font mt-3">
+  <div class="container mx-auto flex flex-wrap items-center justify-between">
+    <!-- ロゴアイコン -->
+    <div class="flex items-center">
+      <%= image_tag('Korean_Trip.png', size: "300x300") %>
+    </div>
+
+    <!-- ナビゲーションメニューと新規登録ボタン -->
+    <div class="flex items-center">
+      <nav class="flex items-center text-base mr-5">
+        <!-- ナビゲーションリンク -->
+        <%= link_to "新規投稿", new_post_path, class: "mr-5 hover:text-custom-orange" %>
+        <%= link_to "リンク２", "#", class: "mr-5 hover:text-custom-orange" %>
+        <%= link_to "リンク３", "#", class: "mr-5 hover:text-custom-orange" %>
+        <%= link_to "リンク４", "#", class: "mr-5 hover:text-custom-orange" %>
+        <%= form_with(url: destroy_user_session_path, method: :delete, class: "hover:text-custom-orange") do |form| %>
+          <%= form.submit "ログアウト", class: "link no-underline" %>
+        <% end %>
+      </nav>
+
+    </div>
+  </div>
+</header>
+
+
+

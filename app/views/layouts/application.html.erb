@@ -6,11 +6,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', type: 'module' %>
+    <script src="https://kit.fontawesome.com/2cb008462d.js" crossorigin="anonymous"></script>
+
   </head>
 
-  <body>
+  <body class="font-poppins flex flex-col min-h-screen">
+    <% if user_signed_in? %>
+      <%= render 'shared/header' %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
+    <%= render 'shared/flash_message' %>
     <%= yield %>
-  </body>
+    <%= render 'shared/footer' %>
+</body>
+
 </html>
